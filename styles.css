@@ -1,14 +1,21 @@
 /* styles.css */
 
-/* Styling for characters animation */
-.characters {
-    width: 200px;
-    height: 200px;
-    background-image: url('characters.png'); /* Replace 'characters.png' with your character image */
-    background-size: cover;
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
-/* Styling for buttons layout */
+.container {
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
 .buttons {
     margin-top: 20px;
 }
@@ -26,12 +33,14 @@ button {
 }
 
 button:hover {
-    background-color: #ff3333;
+    background-color: #c40808;
 }
 
-/* Styling for message display */
+
 #message {
     margin-top: 20px;
     font-size: 18px;
     font-weight: bold;
+    display: none; /*initially hide the message element */
+    text-align: center;
 }
