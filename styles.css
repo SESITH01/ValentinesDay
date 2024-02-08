@@ -1,0 +1,37 @@
+/* styles.css */
+
+/* Styling for characters animation */
+.characters {
+    width: 200px;
+    height: 200px;
+    background-image: url('characters.png'); /* Replace 'characters.png' with your character image */
+    background-size: cover;
+}
+
+/* Styling for buttons layout */
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #ff4d4d;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff3333;
+}
+
+/* Styling for message display */
+#message {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
