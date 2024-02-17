@@ -28,11 +28,26 @@ h1 {
     font-size: 40px;
 }
 
-img {
+#img {
     width: 250%; /* Set the desired width */
     margin-top: 0px;
     position: absolute; /* Position the image absolutely within container */
     transform: translate(-49%, -50%); /* Center the image precisely */
+}
+
+@keyframes bobbing {
+    0%, 100% { transform: translate(-50%, -50%); } /* Maintain centered position */
+    50% { transform: translate(-50%, -55%); } /* Adjust vertical position for bobbing effect */
+}
+
+#img2 {
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: bobbing 1s infinite; /* Add the bobbing animation */
 }
 
 .buttons {
