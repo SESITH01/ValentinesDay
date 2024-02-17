@@ -1,46 +1,111 @@
 /* styles.css */
 
 body {
+    font-family: "skippy-sharp", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+    background-color: #d5dee4;
 }
 
 .container {
     text-align: center;
+    position: relative; /* Add position relative to container */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
+
 h1 {
-    margin-bottom: 20px;
+    margin-bottom: 115px;
+    margin-top: 20px;
+    font-size: 40px;
+}
+
+img {
+    width: 250%; /* Set the desired width */
+    margin-top: 0px;
+    position: absolute; /* Position the image absolutely within container */
+    transform: translate(-49%, -50%); /* Center the image precisely */
 }
 
 .buttons {
-    margin-top: 20px;
+    margin-top: 70px;
 }
 
 button {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    background-color: #ff4d4d;
+    background-color: #366a9a;
     color: #ffffff;
     border: none;
     border-radius: 5px;
     margin-right: 10px;
     transition: background-color 0.3s ease;
+    position: relative; /* Add position relative to buttons */
+    z-index: 1; /* Ensure buttons appear above GIF image */
 }
 
-button:hover {
-    background-color: #c40808;
+#yesBtn:hover {
+    background-color: #0dc356; /* Red background color on hover for #yesBtn */
 }
 
+#noBtn:hover {
+    background-color: #c80505; /* Green background color on hover for #noBtn */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeOutUp {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
 
 #message {
     margin-top: 20px;
-    font-size: 18px;
+    font-size: 27px;
     font-weight: bold;
     display: none; /*initially hide the message element */
     text-align: center;
+    animation: fadeIn 0.5s ease-in forwards;
+}
+
+.message-visible {
+    animation: fadeOutUp 0.5s ease-out forwards;
+}
+
+@keyframes popOut {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
 }
