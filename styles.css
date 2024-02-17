@@ -37,7 +37,7 @@ h1 {
 
 @keyframes bobbing {
     0%, 100% { transform: translate(-50%, -50%); } /* Maintain centered position */
-    50% { transform: translate(-50%, -55%); } /* Adjust vertical position for bobbing effect */
+    50% { transform: translate(-50%, -60%); } /* Adjust vertical position for bobbing effect */
 }
 
 #img2 {
